@@ -1,0 +1,862 @@
+/* 
+    Reset básico da página.
+    Essas regras removem comportamentos padrão do navegador
+    e deixam o layout mais previsível.
+*/
+
+/* Seleciona todos os elementos da página. */
+* {
+  /* Remove a margem padrão de todos os elementos. */
+  margin: 0;
+
+  /* Remove o espaçamento interno padrão de todos os elementos. */
+  padding: 0;
+
+  /* Inclui padding e borda no cálculo total de largura e altura dos elementos. */
+  box-sizing: border-box;
+}
+
+/* Define configurações gerais para o documento HTML. */
+html {
+  /* Faz a rolagem da página acontecer de forma suave ao clicar em links internos. */
+  scroll-behavior: smooth;
+}
+
+/* Define os estilos gerais do corpo da página. */
+body {
+  /* Define a fonte principal da página como Georgia. */
+  font-family: Georgia, "Times New Roman", serif;
+
+  /* Define a cor de fundo geral da página. */
+  background-color: #edf3f7;
+
+  /* Define a cor padrão dos textos. */
+  color: #243746;
+
+  /* Define a altura das linhas dos textos, melhorando a leitura. */
+  line-height: 1.6;
+}
+
+/* Define o comportamento padrão das imagens. */
+img {
+  /* Faz a imagem se comportar como bloco. */
+  display: block;
+
+  /* Faz a imagem ocupar toda a largura disponível. */
+  width: 100%;
+
+  /* Mantém a proporção natural da imagem. */
+  height: auto;
+}
+
+/* Define o comportamento visual padrão dos links. */
+a {
+  /* Faz o link herdar a cor do elemento em que está inserido. */
+  color: inherit;
+
+  /* Remove o sublinhado padrão dos links. */
+  text-decoration: none;
+}
+
+/* Define o comportamento visual padrão das listas. */
+ul {
+  /* Remove os marcadores padrão das listas. */
+  list-style: none;
+}
+
+/* Classe reutilizável para centralizar e limitar o conteúdo da página. */
+.container {
+  /* Define que o container ocupará 90% da tela, mas nunca passará de 1180px. */
+  width: min(90%, 1180px);
+
+  /* Centraliza o container horizontalmente. */
+  margin: 0 auto;
+}
+
+/* cabeçalho */
+
+/* Estiliza o cabeçalho principal da página. */
+.cabecalho-principal {
+  /* Define a cor de fundo do cabeçalho. */
+  background-color: #f8fbfd;
+
+  /* Adiciona uma borda inferior. */
+  border-bottom: 1px solid #c8d8e5;
+
+  /* Adiciona espaçamento interno. */
+  padding: 24px 0;
+}
+
+/* Organiza o conteúdo interno do cabeçalho. */
+.cabecalho-conteudo {
+  /* Ativa o Flexbox para organizar os elementos em linha. */
+  display: flex;
+
+  /* Distribui os elementos com espaço entre eles. */
+  justify-content: space-between;
+
+  /* Alinha os elementos verticalmente ao centro. */
+  align-items: center;
+
+  /* Define um espaço mínimo entre a marca e o menu. */
+  gap: 24px;
+
+  /* Permite quebra de linha em telas menores. */
+  flex-wrap: wrap;
+}
+
+/* Estiliza o título da marca. */
+.marca-titulo {
+  /* Define o tamanho da fonte de forma responsiva. */
+  font-size: clamp(1.8rem, 4vw, 2.2rem);
+
+  /* Define a cor do título da marca. */
+  color: #1f4e79;
+
+  /* Adiciona um pequeno espaço abaixo do título. */
+  margin-bottom: 4px;
+}
+
+/* Estiliza o subtítulo da marca. */
+.marca-subtitulo {
+  /* Define o tamanho da fonte do subtítulo. */
+  font-size: 0.95rem;
+
+  /* Define uma cor mais suave para o subtítulo. */
+  color: #7d5940;
+}
+
+/* Organiza a lista de links do menu. */
+.menu-lista {
+  /* Ativa o Flexbox para colocar os itens do menu lado a lado. */
+  display: flex;
+
+  /* Define o espaço entre os itens do menu. */
+  gap: 24px;
+
+  /* Permite quebra em telas menores. */
+  flex-wrap: wrap;
+}
+
+/* Estiliza os links do menu. */
+.menu-link {
+  /* Define o tamanho da fonte dos links. */
+  font-size: 1rem;
+
+  /* Deixa os links em negrito. */
+  font-weight: bold;
+
+  /* Define a cor dos links. */
+  color: #1f4e79;
+}
+
+/* Estiliza o link do menu quando o usuário passa o mouse ou usa teclado. */
+.menu-link:hover,
+.menu-link:focus {
+  /* Adiciona sublinhado para indicar interação. */
+  text-decoration: underline;
+}
+
+/* banner */
+
+/* Estiliza a seção principal de apresentação da página. */
+.secao-banner {
+  /* Define espaçamento interno responsivo. */
+  padding: clamp(48px, 8vw, 70px) 0;
+
+  /* Define a cor de fundo do banner. */
+  background-color: #dce9f2;
+}
+
+/* Organiza o conteúdo interno do banner. */
+.banner-conteudo {
+  /* Ativa o Flexbox para colocar texto e imagem lado a lado. */
+  display: flex;
+
+  /* Distribui os elementos com espaço entre eles. */
+  justify-content: space-between;
+
+  /* Alinha os elementos verticalmente ao centro. */
+  align-items: center;
+
+  /* Define espaçamento responsivo entre texto e imagem. */
+  gap: clamp(32px, 5vw, 50px);
+}
+
+/* Define o comportamento do bloco textual do banner. */
+.banner-texto {
+  /* Faz o bloco textual ocupar parte flexível do espaço. */
+  flex: 1;
+}
+
+/* Estiliza a frase curta de destaque do banner. */
+.banner-destaque {
+  /* Define o tamanho da fonte. */
+  font-size: 0.95rem;
+
+  /* Deixa a frase em negrito. */
+  font-weight: bold;
+
+  /* Aumenta levemente o espaçamento entre letras. */
+  letter-spacing: 0.5px;
+
+  /* Transforma o texto em letras maiúsculas. */
+  text-transform: uppercase;
+
+  /* Define a cor da frase de destaque. */
+  color: #4a7ea8;
+
+  /* Adiciona espaço abaixo. */
+  margin-bottom: 18px;
+}
+
+/* Estiliza o título principal do banner. */
+.banner-titulo {
+  /* Define tamanho de fonte responsivo. */
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+
+  /* Define a altura das linhas do título. */
+  line-height: 1.15;
+
+  /* Define a cor do título. */
+  color: #243746;
+
+  /* Adiciona espaço abaixo do título. */
+  margin-bottom: 24px;
+}
+
+/* Estiliza o parágrafo descritivo do banner. */
+.banner-descricao {
+  /* Define tamanho de fonte responsivo. */
+  font-size: clamp(1rem, 2vw, 1.1rem);
+
+  /* Define a cor do texto. */
+  color: #4f6475;
+
+  /* Adiciona espaço abaixo. */
+  margin-bottom: 30px;
+}
+
+/* Organiza os botões do banner. */
+.banner-botoes {
+  /* Ativa Flexbox para organizar os botões. */
+  display: flex;
+
+  /* Define o espaço entre os botões. */
+  gap: 16px;
+
+  /* Permite quebra de linha em telas menores. */
+  flex-wrap: wrap;
+}
+
+/* Define o comportamento da área da imagem do banner. */
+.banner-imagem {
+  /* Faz a área da imagem ocupar parte flexível do espaço. */
+  flex: 1;
+}
+
+/* Estiliza a imagem do banner. */
+.banner-imagem img {
+  /* Define altura responsiva. */
+  height: clamp(320px, 45vw, 520px);
+
+  /* Faz a imagem preencher a área sem distorcer. */
+  object-fit: cover;
+
+  /* Arredonda os cantos da imagem. */
+  border-radius: 18px;
+
+  /* Adiciona sombra à imagem. */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.16);
+}
+
+/* botões */
+
+/* Define o estilo base dos botões. */
+.botao {
+  /* Faz o botão se comportar como bloco em linha. */
+  display: inline-block;
+
+  /* Adiciona espaçamento interno. */
+  padding: 14px 24px;
+
+  /* Arredonda os cantos. */
+  border-radius: 8px;
+
+  /* Deixa o texto em negrito. */
+  font-weight: bold;
+
+  /* Define tamanho da fonte. */
+  font-size: 1rem;
+
+  /* Centraliza o texto. */
+  text-align: center;
+}
+
+/* Define o estilo visual do botão principal. */
+.botao-primario {
+  /* Define a cor de fundo do botão principal. */
+  background-color: #2f5d7e;
+
+  /* Define a cor do texto do botão principal. */
+  color: #ffffff;
+}
+
+/* Define o estilo visual do botão secundário. */
+.botao-secundario {
+  /* Define a cor de fundo do botão secundário. */
+  background-color: #ffffff;
+
+  /* Define a cor do texto do botão secundário. */
+  color: #2f5d7e;
+  border: 2px solid #2f5d7e;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+}
+
+/* Estiliza botões quando o usuário passa o mouse ou usa teclado. */
+.botao:hover,
+.botao:focus {
+  /* Reduz levemente o brilho para indicar interação. */
+  filter: brightness(0.95);
+}
+
+/* topo das seções */
+
+/* Estiliza o cabeçalho interno das seções. */
+.secao-topo {
+  /* Define largura máxima. */
+  width: min(100%, 760px);
+
+  /* Centraliza e adiciona margem inferior. */
+  margin: 0 auto 42px;
+
+  /* Centraliza o texto. */
+  text-align: center;
+}
+
+/* Estiliza a etiqueta textual das seções. */
+.secao-etiqueta {
+  /* Define tamanho da fonte. */
+  font-size: 0.9rem;
+
+  /* Deixa a etiqueta em negrito. */
+  font-weight: bold;
+
+  /* Transforma em letras maiúsculas. */
+  text-transform: uppercase;
+
+  /* Aumenta espaçamento entre letras. */
+  letter-spacing: 0.6px;
+
+  /* Define cor da etiqueta. */
+  color: #4a7ea8;
+
+  /* Adiciona espaço abaixo. */
+  margin-bottom: 10px;
+}
+
+/* Estiliza o título das seções. */
+.secao-titulo {
+  /* Define tamanho de fonte responsivo. */
+  font-size: clamp(1.9rem, 4vw, 2.4rem);
+
+  /* Define cor do título. */
+  color: #243746;
+
+  /* Adiciona espaço abaixo. */
+  margin-bottom: 14px;
+}
+
+/* Estiliza a descrição das seções. */
+.secao-descricao {
+  /* Define tamanho de fonte responsivo. */
+  font-size: clamp(1rem, 2vw, 1.05rem);
+
+  /* Define cor do texto descritivo. */
+  color: #4f6475;
+}
+
+/* destaques */
+
+/* Estiliza a seção de destaques. */
+.secao-destaques {
+  /* Define espaçamento interno responsivo. */
+  padding: clamp(56px, 8vw, 80px) 0;
+
+  /* Define cor de fundo. */
+  background-color: #f7fafc;
+}
+
+/* Organiza os cards em grade responsiva. */
+.grade-destaques {
+  /* Ativa CSS Grid. */
+  display: grid;
+
+  /* Cria colunas automáticas. */
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+
+  /* Define espaço entre os cards. */
+  gap: 28px;
+}
+
+/* Estiliza cada card. */
+.card-destaque {
+  /* Define cor de fundo. */
+  background-color: #ffffff;
+
+  /* Arredonda os cantos. */
+  border-radius: 14px;
+
+  /* Esconde partes internas que ultrapassem os cantos. */
+  overflow: hidden;
+
+  /* Adiciona sombra. */
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+}
+
+/* Estiliza imagens dos cards. */
+.card-imagem img {
+  /* Define altura fixa. */
+  height: 220px;
+
+  /* Faz a imagem preencher o espaço sem distorcer. */
+  object-fit: cover;
+}
+
+/* Estiliza a área textual dos cards. */
+.card-conteudo {
+  /* Adiciona espaçamento interno. */
+  padding: 22px;
+}
+
+/* Estiliza o título de cada card. */
+.card-titulo {
+  /* Define tamanho da fonte. */
+  font-size: 1.3rem;
+
+  /* Define cor do título. */
+  color: #243746;
+
+  /* Adiciona espaço abaixo. */
+  margin-bottom: 12px;
+}
+
+/* Estiliza o texto dos cards. */
+.card-texto {
+  /* Define tamanho da fonte. */
+  font-size: 1rem;
+
+  /* Define cor do texto. */
+  color: #4f6475;
+}
+
+/* história */
+
+/* Estiliza a seção sobre o restaurante. */
+.secao-historia {
+  /* Define espaçamento interno responsivo. */
+  padding: clamp(60px, 8vw, 90px) 0;
+
+  /* Define cor de fundo. */
+  background-color: #e2edf5;
+}
+
+/* Organiza imagem e texto dentro da seção. */
+.historia-conteudo {
+  /* Ativa Flexbox. */
+  display: flex;
+
+  /* Alinha verticalmente ao centro. */
+  align-items: center;
+
+  /* Define espaçamento responsivo. */
+  gap: clamp(32px, 5vw, 48px);
+}
+
+/* Define o comportamento da área de imagem. */
+.historia-imagem {
+  /* Faz a área de imagem ocupar parte flexível. */
+  flex: 1;
+}
+
+/* Estiliza a imagem da seção. */
+.historia-imagem img {
+  /* Define altura responsiva. */
+  height: clamp(320px, 42vw, 500px);
+
+  /* Faz a imagem preencher sem distorcer. */
+  object-fit: cover;
+
+  /* Arredonda os cantos da imagem. */
+  border-radius: 18px;
+}
+
+/* Define o comportamento da área textual. */
+.historia-texto {
+  /* Faz a área textual ocupar parte flexível. */
+  flex: 1;
+}
+
+/* Ajusta o cabeçalho dentro da história. */
+.historia-texto .secao-topo {
+  /* Permite largura automática. */
+  width: auto;
+
+  /* Remove centralização padrão. */
+  margin: 0 0 24px;
+
+  /* Alinha texto à esquerda. */
+  text-align: left;
+}
+
+/* Estiliza os parágrafos da seção de história. */
+.historia-paragrafo {
+  /* Define tamanho de fonte responsivo. */
+  font-size: clamp(1rem, 2vw, 1.08rem);
+
+  /* Define cor dos parágrafos. */
+  color: #4f6475;
+
+  /* Adiciona espaço abaixo. */
+  margin-bottom: 18px;
+}
+
+/* informações */
+
+/* Estiliza a seção de informações úteis. */
+.secao-informacoes {
+  /* Define espaçamento interno responsivo. */
+  padding: clamp(56px, 8vw, 80px) 0;
+
+  /* Define cor de fundo. */
+  background-color: #f7fafc;
+}
+
+/* Estiliza cada bloco de informação. */
+.bloco-informacao {
+  /* Define cor de fundo. */
+  background-color: #ffffff;
+
+  /* Adiciona espaçamento interno. */
+  padding: 28px;
+
+  /* Arredonda os cantos. */
+  border-radius: 14px;
+
+  /* Adiciona borda fina. */
+  border: 1px solid #c8d8e5;
+}
+
+/* Estiliza o título de cada bloco. */
+.bloco-titulo {
+  /* Define tamanho da fonte. */
+  font-size: 1.2rem;
+
+  /* Define cor do título. */
+  color: #243746;
+
+  /* Adiciona espaço abaixo. */
+  margin-bottom: 14px;
+}
+
+/* Estiliza os textos dos blocos. */
+.bloco-texto {
+  /* Define tamanho da fonte. */
+  font-size: 1rem;
+
+  /* Define cor dos textos. */
+  color: #4f6475;
+
+  /* Adiciona espaço abaixo. */
+  margin-bottom: 10px;
+}
+
+/* Estiliza a área de ações da seção de informações. */
+.acoes-informacoes {
+  /* Centraliza o conteúdo. */
+  text-align: center;
+
+  /* Adiciona espaço acima. */
+  margin-top: 36px;
+}
+
+/* rodapé */
+
+/* Estiliza o rodapé principal da página. */
+.rodape-principal {
+  /* Define cor de fundo. */
+  background-color: #243746;
+
+  /* Define cor dos textos. */
+  color: #edf3f7;
+
+  /* Adiciona espaçamento interno. */
+  padding: 28px 0;
+}
+
+/* Estiliza o conteúdo interno do rodapé. */
+.rodape-conteudo {
+  /* Centraliza o texto. */
+  text-align: center;
+}
+
+/* Estiliza os parágrafos do rodapé. */
+.rodape-texto {
+  /* Define tamanho da fonte. */
+  font-size: 0.98rem;
+
+  /* Adiciona espaço abaixo. */
+  margin-bottom: 6px;
+}
+
+/* Ajustes para as interações com JavaScript. */
+
+/* Estiliza o botão de encomenda. */
+.botao-encomenda {
+  /* Remove borda padrão. */
+  border: none;
+
+  /* Usa a mesma fonte do restante da página. */
+  font-family: inherit;
+
+  /* Indica que o botão é clicável. */
+  cursor: pointer;
+}
+
+/* Estiliza a área de orientações de encomenda. */
+.orientacoes-encomenda {
+  /* Define largura máxima. */
+  width: min(100%, 720px);
+
+  /* Centraliza e adiciona margem superior. */
+  margin: 28px auto 0;
+
+  /* Adiciona espaçamento interno. */
+  padding: 26px;
+
+  /* Adiciona borda. */
+  border: 1px solid #c8d8e5;
+
+  /* Arredonda os cantos. */
+  border-radius: 14px;
+
+  /* Define cor de fundo. */
+  background-color: #ffffff;
+
+  /* Alinha texto à esquerda. */
+  text-align: left;
+
+  /* Adiciona sombra leve. */
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
+}
+
+/* Estiliza o título da área de orientações. */
+.orientacoes-titulo {
+  /* Adiciona margem inferior. */
+  margin-bottom: 12px;
+
+  /* Define tamanho da fonte. */
+  font-size: 1.25rem;
+
+  /* Define cor do texto. */
+  color: #243746;
+}
+
+/* Estiliza os textos da área de orientações. */
+.orientacoes-texto {
+  /* Adiciona margem inferior. */
+  margin-bottom: 10px;
+
+  /* Define tamanho da fonte. */
+  font-size: 1rem;
+
+  /* Define cor do texto. */
+  color: #4f6475;
+}
+
+/* Classe usada pelo JavaScript para esconder elementos. */
+.oculto {
+  /* Remove o elemento da visualização. */
+  display: none;
+}
+
+/* Estiliza a área de mensagem criada para a interação dos destaques. */
+.mensagem-destaque {
+  /* Adiciona margem. */
+  margin: 24px 0;
+
+  /* Adiciona espaçamento interno. */
+  padding: 18px 22px;
+
+  /* Define cor de fundo. */
+  background-color: #e8f1f7;
+
+  /* Adiciona borda. */
+  border: 1px solid #c8d8e5;
+
+  /* Arredonda cantos. */
+  border-radius: 16px;
+}
+
+/* Estiliza o parágrafo dentro da área de mensagem. */
+.mensagem-destaque p {
+  /* Remove margem padrão. */
+  margin: 0;
+
+  /* Define cor do texto. */
+  color: #243746;
+
+  /* Define tamanho da fonte. */
+  font-size: 1rem;
+
+  /* Define altura da linha. */
+  line-height: 1.6;
+
+  /* Centraliza texto. */
+  text-align: center;
+}
+
+/* Indica visualmente que os cards podem receber interação. */
+.card-interativo {
+  /* Indica que o card é clicável. */
+  cursor: pointer;
+
+  /* Suaviza movimentos e sombra. */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Cria retorno visual no hover. */
+.card-interativo:hover {
+  /* Move levemente o card para cima. */
+  transform: translateY(-4px);
+
+  /* Aumenta a sombra. */
+  box-shadow: 0 10px 24px rgba(75, 36, 20, 0.18);
+}
+
+/* Cria retorno visual para navegação por teclado. */
+.card-interativo:focus-visible {
+  /* Cria contorno visível. */
+  outline: 3px solid #2f5d7e;
+
+  /* Afasta o contorno do card. */
+  outline-offset: 4px;
+}
+
+/* Media query para tablets e telas médias. */
+@media (max-width: 900px) {
+  /* Centraliza o conteúdo do cabeçalho. */
+  .cabecalho-conteudo {
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* Centraliza os links do menu. */
+  .menu-lista {
+    justify-content: center;
+  }
+
+  /* Coloca texto e imagem do banner em coluna. */
+  .banner-conteudo {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* Centraliza os botões do banner. */
+  .banner-botoes {
+    justify-content: center;
+  }
+
+  /* Faz a imagem ocupar toda a largura. */
+  .banner-imagem {
+    width: 100%;
+  }
+
+  /* Coloca imagem e texto da história em coluna. */
+  .historia-conteudo {
+    flex-direction: column;
+  }
+
+  /* Centraliza o cabeçalho da história. */
+  .historia-texto .secao-topo {
+    text-align: center;
+  }
+
+  /* Centraliza textos da história. */
+  .historia-texto {
+    text-align: center;
+  }
+}
+
+/* Media query para celulares. */
+@media (max-width: 600px) {
+  /* Reduz espaçamento do cabeçalho. */
+  .cabecalho-principal {
+    padding: 20px 0;
+  }
+
+  /* Reduz espaço entre links. */
+  .menu-lista {
+    gap: 14px;
+  }
+
+  /* Reduz tamanho dos links. */
+  .menu-link {
+    font-size: 0.95rem;
+  }
+
+  /* Coloca botões em coluna. */
+  .banner-botoes {
+    flex-direction: column;
+  }
+
+  /* Faz botões ocuparem toda a largura. */
+  .botao {
+    width: 100%;
+  }
+
+  /* Reduz altura das imagens principais. */
+  .banner-imagem img,
+  .historia-imagem img {
+    height: 300px;
+  }
+
+  /* Reduz altura das imagens dos cards. */
+  .card-imagem img {
+    height: 200px;
+  }
+
+  /* Reduz espaçamento dos blocos. */
+  .bloco-informacao {
+    padding: 24px;
+  }
+}
+
+/* Media query para celulares muito estreitos. */
+@media (max-width: 380px) {
+  /* Aumenta aproveitamento horizontal. */
+  .container {
+    width: 92%;
+  }
+
+  /* Reduz título da marca. */
+  .marca-titulo {
+    font-size: 1.6rem;
+  }
+
+  /* Reduz título do banner. */
+  .banner-titulo {
+    font-size: 2rem;
+  }
+
+  /* Reduz títulos das seções. */
+  .secao-titulo {
+    font-size: 1.7rem;
+  }
+
+  /* Coloca menu em coluna. */
+  .menu-lista {
+    flex-direction: column;
+    gap: 8px;
+  }
+}

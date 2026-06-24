@@ -1,0 +1,441 @@
+<!-- Declara que este documento utiliza HTML5. -->
+<!DOCTYPE html>
+
+<!-- Inicia o documento HTML e informa que o idioma principal da página é português do Brasil. -->
+<html lang="pt-BR">
+
+<!-- Inicia a área de configurações da página, que não aparece diretamente no conteúdo visual. -->
+<head>
+
+    <!-- Define a codificação de caracteres como UTF-8, permitindo acentos e caracteres especiais. -->
+    <meta charset="UTF-8">
+
+    <!-- Ajusta a página para funcionar melhor em celulares, tablets e telas de diferentes tamanhos. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Define o título que aparecerá na aba do navegador. -->
+    <title>Escola da Costela | Churrasco no Park Way</title>
+
+    <!-- Importa o Bootstrap para uso introdutório no projeto, principalmente em botões e grid simples. -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Conecta este arquivo HTML ao arquivo CSS responsável pela aparência visual da página. -->
+    <link rel="stylesheet" href="css/style.css">
+
+<!-- Fecha a área de configurações da página. -->
+</head>
+
+<!-- Inicia o corpo da página, ou seja, tudo o que será exibido ao usuário. -->
+<body id="topo">
+
+    <!-- Inicia o cabeçalho principal da página, onde ficam a marca e o menu de navegação. -->
+    <header id="cabecalho" class="cabecalho-principal">
+
+        <!-- Agrupa o conteúdo interno do cabeçalho. -->
+        <section class="container cabecalho-conteudo">
+
+            <!-- Agrupa o título da marca e seu subtítulo. -->
+            <hgroup class="marca">
+
+                <!-- Título principal da página, usado para identificar a marca do site. -->
+                <h1 class="marca-titulo">Escola da Costela</h1>
+
+                <!-- Subtítulo da marca, explicando brevemente o tipo de negócio. -->
+                <p class="marca-subtitulo">Churrasco gaúcho no Park Way</p>
+
+            <!-- Fecha o agrupamento da marca. -->
+            </hgroup>
+
+            <!-- Inicia o menu principal de navegação da página. -->
+            <nav id="menu-principal" class="menu-principal" aria-label="Menu principal">
+
+                <!-- Cria uma lista não ordenada para organizar os links do menu. -->
+                <ul class="menu-lista">
+
+                    <!-- Link interno para o topo da página. -->
+                    <li class="menu-item"><a href="#topo" class="menu-link">Início</a></li>
+
+                    <!-- Link interno para a seção de pratos. -->
+                    <li class="menu-item"><a href="#destaques" class="menu-link">Pratos</a></li>
+
+                    <!-- Link interno para a seção sobre a casa. -->
+                    <li class="menu-item"><a href="#nossa-historia" class="menu-link">A casa</a></li>
+
+                    <!-- Link interno para a seção de encomendas. -->
+                    <li class="menu-item"><a href="#encomendas" class="menu-link">Encomendas</a></li>
+
+                    <!-- Link interno para a seção de contato. -->
+                    <li class="menu-item"><a href="#contato" class="menu-link">Contato</a></li>
+
+                <!-- Fecha a lista de links do menu. -->
+                </ul>
+
+            <!-- Fecha o menu de navegação. -->
+            </nav>
+
+        <!-- Fecha o agrupamento interno do cabeçalho. -->
+        </section>
+
+    <!-- Fecha o cabeçalho principal da página. -->
+    </header>
+
+    <!-- Inicia o conteúdo principal da página. -->
+    <main id="conteudo-principal" class="conteudo-principal">
+
+        <!-- Inicia a seção de banner, que apresenta a chamada principal da página. -->
+        <section id="banner" class="secao-banner">
+
+            <!-- Agrupa o conteúdo interno do banner. -->
+            <section class="container banner-conteudo">
+
+                <!-- Cria um bloco de conteúdo textual para a apresentação inicial do restaurante. -->
+                <article class="banner-texto">
+
+                    <!-- Frase curta de destaque, funcionando como uma chamada introdutória. -->
+                    <p class="banner-destaque">Costela, fogo baixo e sabor de tradição.</p>
+
+                    <!-- Título principal do banner, com a promessa central da página. -->
+                    <h2 class="banner-titulo">
+                        Uma experiência de churrasco para reunir família, amigos e bons momentos.
+                    </h2>
+
+                    <!-- Parágrafo que descreve melhor a proposta do restaurante. -->
+                    <p class="banner-descricao">
+                        A Escola da Costela é um restaurante do Park Way voltado para quem procura
+                        churrasco com sabor gaúcho, porções generosas, acompanhamentos tradicionais
+                        e atendimento direto para almoço, retirada e encomendas.
+                    </p>
+
+                    <!-- Agrupa os links de ação do banner. -->
+                    <p class="banner-botoes">
+
+                        <!-- Link que leva o usuário para a seção de pratos. -->
+                        <a href="#destaques" class="botao botao-primario btn">Ver pratos</a>
+
+                        <!-- Link que leva o usuário para a seção de encomendas. -->
+                        <a href="#encomendas" class="botao botao-secundario btn">Fazer encomenda</a>
+
+                    <!-- Fecha o agrupamento dos botões do banner. -->
+                    </p>
+
+                <!-- Fecha o bloco textual do banner. -->
+                </article>
+
+                <!-- Agrupa a imagem principal do banner. -->
+                <figure class="banner-imagem">
+
+                    <!-- Insere uma imagem externa relacionada a churrasco. -->
+                    <img
+                        src="https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?auto=format&fit=crop&w=900&q=80"
+                        alt="Costela assada servida em tábua com acompanhamentos">
+
+                <!-- Fecha a figura do banner. -->
+                </figure>
+
+            <!-- Fecha o agrupamento interno do banner. -->
+            </section>
+
+        <!-- Fecha a seção de banner. -->
+        </section>
+
+        <!-- Inicia a seção de destaques do cardápio. -->
+        <section id="destaques" class="secao-destaques">
+
+            <!-- Agrupa o conteúdo interno da seção. -->
+            <section class="container">
+
+                <!-- Inicia o cabeçalho da seção. -->
+                <header class="secao-topo">
+
+                    <!-- Pequena etiqueta textual. -->
+                    <p class="secao-etiqueta">Sabores da casa</p>
+
+                    <!-- Título da seção. -->
+                    <h2 class="secao-titulo">Destaques do restaurante</h2>
+
+                    <!-- Parágrafo que explica o conteúdo apresentado. -->
+                    <p class="secao-descricao">
+                        Conheça opções que representam a proposta da casa: carnes preparadas com cuidado,
+                        acompanhamentos de churrasco e pratos pensados para compartilhar.
+                    </p>
+
+                <!-- Fecha o cabeçalho da seção. -->
+                </header>
+
+                <!-- Área de mensagem que será atualizada pelo JavaScript. -->
+                <aside class="mensagem-destaque" aria-live="polite">
+
+                    <!-- Texto inicial que será alterado quando o usuário clicar nos cards. -->
+                    <p id="mensagem-destaque">
+                        Clique em um dos pratos para ver uma sugestão de consumo.
+                    </p>
+
+                <!-- Fecha a área de mensagem. -->
+                </aside>
+
+                <!-- Inicia a grade que reúne os cards de produtos destacados. -->
+                <section class="grade-destaques">
+
+                    <!-- Card 1. -->
+                    <article class="card-destaque card-interativo" data-produto="costela" tabindex="0" role="button" aria-label="Ver sugestão sobre costela bovina">
+
+                        <!-- Imagem do prato. -->
+                        <figure class="card-imagem">
+                            <img
+                                src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=700&q=80"
+                                alt="Costela bovina assada e fatiada">
+                        </figure>
+
+                        <!-- Conteúdo do card. -->
+                        <section class="card-conteudo">
+                            <h3 class="card-titulo">Costela bovina</h3>
+                            <p class="card-texto">
+                                Prato principal da casa, preparado para valorizar maciez, suculência e sabor defumado.
+                            </p>
+                        </section>
+
+                    <!-- Fecha o card. -->
+                    </article>
+
+                    <!-- Card 2. -->
+                    <article class="card-destaque card-interativo" data-produto="brisket" tabindex="0" role="button" aria-label="Ver sugestão sobre brisket">
+
+                        <!-- Imagem do prato. -->
+                        <figure class="card-imagem">
+                            <img
+                                src="https://images.unsplash.com/photo-1625944230945-1b7dd3b949ab?auto=format&fit=crop&w=700&q=80"
+                                alt="Carne assada fatiada em tábua de madeira">
+                        </figure>
+
+                        <!-- Conteúdo do card. -->
+                        <section class="card-conteudo">
+                            <h3 class="card-titulo">Brisket fatiado</h3>
+                            <p class="card-texto">
+                                Corte assado lentamente, ideal para quem gosta de carne macia e sabor marcante.
+                            </p>
+                        </section>
+
+                    <!-- Fecha o card. -->
+                    </article>
+
+                    <!-- Card 3. -->
+                    <article class="card-destaque card-interativo" data-produto="acompanhamentos" tabindex="0" role="button" aria-label="Ver sugestão sobre acompanhamentos">
+
+                        <!-- Imagem do prato. -->
+                        <figure class="card-imagem">
+                            <img
+                                src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=700&q=80"
+                                alt="Mesa com acompanhamentos variados para refeição">
+                        </figure>
+
+                        <!-- Conteúdo do card. -->
+                        <section class="card-conteudo">
+                            <h3 class="card-titulo">Acompanhamentos</h3>
+                            <p class="card-texto">
+                                Arroz, farofa, mandioca, saladas e opções tradicionais para completar o churrasco.
+                            </p>
+                        </section>
+
+                    <!-- Fecha o card. -->
+                    </article>
+
+                    <!-- Card 4. -->
+                    <article class="card-destaque card-interativo" data-produto="encomenda" tabindex="0" role="button" aria-label="Ver sugestão sobre encomendas">
+
+                        <!-- Imagem do prato. -->
+                        <figure class="card-imagem">
+                            <img
+                                src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=700&q=80"
+                                alt="Churrasco servido em tábua para compartilhar">
+                        </figure>
+
+                        <!-- Conteúdo do card. -->
+                        <section class="card-conteudo">
+                            <h3 class="card-titulo">Porções para retirada</h3>
+                            <p class="card-texto">
+                                Opção prática para levar o sabor da casa para encontros de família ou fim de semana.
+                            </p>
+                        </section>
+
+                    <!-- Fecha o card. -->
+                    </article>
+
+                <!-- Fecha a grade de destaques. -->
+                </section>
+
+            <!-- Fecha o agrupamento interno da seção. -->
+            </section>
+
+        <!-- Fecha a seção de destaques. -->
+        </section>
+
+        <!-- Inicia a seção que apresenta o restaurante. -->
+        <section id="nossa-historia" class="secao-historia">
+
+            <!-- Agrupa a imagem e o texto da seção. -->
+            <section class="container historia-conteudo">
+
+                <!-- Agrupa a imagem da seção. -->
+                <figure class="historia-imagem">
+                    <img
+                        src="https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=900&q=80"
+                        alt="Churrasqueiro preparando carne na grelha">
+                </figure>
+
+                <!-- Inicia o conteúdo textual sobre a proposta do restaurante. -->
+                <article class="historia-texto">
+
+                    <!-- Cabeçalho do bloco textual. -->
+                    <header class="secao-topo">
+                        <p class="secao-etiqueta">Quem somos</p>
+                        <h2 class="secao-titulo">Uma casa feita para quem valoriza churrasco de verdade</h2>
+                    </header>
+
+                    <!-- Parágrafo institucional. -->
+                    <p class="historia-paragrafo">
+                        O restaurante Escola da Costela tem uma proposta simples e direta: servir churrasco
+                        com sabor de tradição, destacando a costela como protagonista e oferecendo uma
+                        experiência acolhedora para moradores do Park Way e visitantes de Brasília.
+                    </p>
+
+                    <!-- Parágrafo institucional. -->
+                    <p class="historia-paragrafo">
+                        A página foi pensada para facilitar o acesso às informações mais importantes:
+                        pratos de destaque, horários de atendimento, formas de encomenda, localização
+                        e contato para quem deseja almoçar no local ou retirar o pedido.
+                    </p>
+
+                <!-- Fecha o conteúdo textual da seção. -->
+                </article>
+
+            <!-- Fecha o agrupamento interno da seção. -->
+            </section>
+
+        <!-- Fecha a seção. -->
+        </section>
+
+        <!-- Inicia a seção de informações sobre encomendas, horários, contato e endereço. -->
+        <section id="encomendas" class="secao-informacoes">
+
+            <!-- Agrupa o conteúdo interno da seção de informações. -->
+            <section class="container">
+
+                <!-- Inicia o cabeçalho da seção de informações úteis. -->
+                <header class="secao-topo">
+                    <p class="secao-etiqueta">Informações úteis</p>
+                    <h2 class="secao-titulo">Atendimento, encomendas e localização</h2>
+                    <p class="secao-descricao">
+                        Antes de ir ao restaurante ou fazer uma retirada, consulte as informações principais
+                        e confirme disponibilidade pelo contato oficial.
+                    </p>
+                </header>
+
+                <!-- Grid Bootstrap usado de forma introdutória para organizar os blocos de informação. -->
+                <section class="row g-4">
+
+                    <!-- Coluna Bootstrap. -->
+                    <article class="col-md-6 col-lg-3">
+                        <section class="bloco-informacao h-100">
+                            <h3 class="bloco-titulo">Encomendas</h3>
+                            <p class="bloco-texto">
+                                A casa aceita encomendas e retiradas, especialmente para quem deseja organizar
+                                um almoço de fim de semana com churrasco.
+                            </p>
+                        </section>
+                    </article>
+
+                    <!-- Coluna Bootstrap. -->
+                    <article class="col-md-6 col-lg-3">
+                        <section class="bloco-informacao h-100">
+                            <h3 class="bloco-titulo">Horário informado</h3>
+                            <p class="bloco-texto">Sexta a domingo, das 11h às 16h.</p>
+                            <p class="bloco-texto">Confirme antes de sair, pois horários podem mudar.</p>
+                        </section>
+                    </article>
+
+                    <!-- Coluna Bootstrap. -->
+                    <article class="col-md-6 col-lg-3" id="contato">
+                        <section class="bloco-informacao h-100">
+                            <h3 class="bloco-titulo">Contato</h3>
+                            <p class="bloco-texto">WhatsApp: (61) 99123-4827</p>
+                            <p class="bloco-texto">Instagram: @escoladacostela</p>
+                        </section>
+                    </article>
+
+                    <!-- Coluna Bootstrap. -->
+                    <article class="col-md-6 col-lg-3">
+                        <section class="bloco-informacao h-100">
+                            <h3 class="bloco-titulo">Endereço</h3>
+                            <p class="bloco-texto">Park Way, Quadra 5, Conjunto 8</p>
+                            <p class="bloco-texto">Brasília – DF</p>
+                        </section>
+                    </article>
+
+                <!-- Fecha o grid Bootstrap. -->
+                </section>
+
+                <!-- Rodapé interno com botão de ação. -->
+                <footer class="acoes-informacoes">
+
+                    <!-- Botão controlado pelo JavaScript. -->
+                    <button class="botao botao-primario botao-encomenda" type="button">
+                        Solicitar encomenda
+                    </button>
+
+                    <!-- Área que começa escondida e aparece quando o usuário clica no botão. -->
+                    <section class="orientacoes-encomenda oculto">
+                        <h3 class="orientacoes-titulo">Como fazer sua encomenda</h3>
+
+                        <p class="orientacoes-texto">
+                            ▪️Entre em contato pelo WhatsApp ou Instagram informando o prato desejado,
+                            a quantidade de pessoas, o dia da retirada e o horário aproximado.
+                        </p>
+
+                        <p class="orientacoes-texto">
+                            ▪️Como o foco da casa é churrasco e retirada, o ideal é confirmar disponibilidade
+                            e horário de funcionamento antes de realizar o pedido.
+                        </p>
+                    </section>
+
+                <!-- Fecha o rodapé interno. -->
+                </footer>
+
+            <!-- Fecha o agrupamento interno da seção de informações. -->
+            </section>
+
+        <!-- Fecha a seção de encomendas, horários e atendimento. -->
+        </section>
+
+    <!-- Fecha o conteúdo principal da página. -->
+    </main>
+
+    <!-- Inicia o rodapé principal do site. -->
+    <footer id="rodape" class="rodape-principal">
+
+        <!-- Agrupa o conteúdo interno do rodapé. -->
+        <section class="container rodape-conteudo">
+
+            <!-- Texto do rodapé. -->
+            <p class="rodape-texto">
+                <strong>Escola da Costela</strong> | Churrasco gaúcho no Park Way
+            </p>
+
+            <!-- Texto complementar do rodapé. -->
+            <p class="rodape-texto">
+                Site acadêmico desenvolvido como estudo de caso de front-end.
+            </p>
+
+        <!-- Fecha o agrupamento interno do rodapé. -->
+        </section>
+
+    <!-- Fecha o rodapé principal do site. -->
+    </footer>
+
+    <!-- Importa o arquivo JavaScript do projeto. -->
+    <script src="js/script.js"></script>
+
+<!-- Fecha o corpo da página. -->
+</body>
+
+<!-- Fecha o documento HTML. -->
+</html>
